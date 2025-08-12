@@ -1,0 +1,2 @@
+INSERT INTO Operations  (ACCT, OperType, GoodID, PartnerID, ObjectID, Qtty, PriceIn, PriceOut, VATIn, VATOut, Discount, Date, UserID, UserRealTime)
+VALUES (65001, 2, 14, 11, 5, 15, 10, 20, 2, 4, 0, 07/12/2023, 64, CURRENT_TIMESTAMP)

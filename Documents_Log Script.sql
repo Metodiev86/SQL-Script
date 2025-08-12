@@ -1,0 +1,36 @@
+CREATE TABLE [dbo].[Documents_Log](
+    [ID] [int] IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
+    [Documents_ID] [int] NOT NULL,
+    [Acct_Before] [int] NULL,
+    [Acct_After] [int] NULL,
+    [OperType_Before] [smallint] NULL,
+    [OperType_After] [smallint] NULL,
+    [InvoiceDate_Before] [smalldatetime] NULL,
+    [InvoiceDate_After] [smalldatetime] NULL,
+    [DocumentType_Before] [smallint] NULL,
+    [DocumentType_After] [smallint] NULL,
+    [ExternalInvoiceDate_Before] [smalldatetime] NULL,
+    [ExternalInvoiceDate_After] [smalldatetime] NULL,
+	[ExternalInvoiceNumber_Before] [nvarchar](255) NULL,
+	[ExternalInvoiceNumber_After] [nvarchar](255) NULL,
+    [PaymentType_Before] [smallint] NULL,
+    [PaymentType_After] [smallint] NULL,
+    [Recipient_Before] [nvarchar](255) NULL,
+	[Recipient_After] [nvarchar](255) NULL,
+	[EGN_Before] [nvarchar](50) NULL,
+	[EGN_After] [nvarchar](50) NULL,
+	[Provider_Before] [nvarchar](255) NULL,
+	[Provider_After] [nvarchar](255) NULL,
+	[TaxDate_Before] [smalldatetime] NULL,
+    [TaxDate_After] [smalldatetime] NULL,
+	[Reason_Before] [nvarchar](255) NULL,
+	[Reason_After] [nvarchar](255) NULL,
+	[Description_Before] [nvarchar](255) NULL,
+	[Description_After] [nvarchar](255) NULL,
+	[Place_Before] [nvarchar](255) NULL,
+	[Place_After] [nvarchar](255) NULL,
+ CONSTRAINT [PK_Documents_Log] PRIMARY KEY CLUSTERED 
+(
+    [ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY];
